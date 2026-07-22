@@ -270,8 +270,7 @@ a:hover {
 }
 
 .nav-section {
-  margin: 0 0 8px;
-  border-bottom: 1px solid var(--line);
+  margin: 0 0 10px;
 }
 
 .nav-section summary {
@@ -279,7 +278,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 12px 4px;
+  padding: 10px 4px;
   color: var(--ink);
   cursor: pointer;
   font-size: 13px;
@@ -303,7 +302,9 @@ a:hover {
 }
 
 .nav-section ol {
-  margin: 0 0 12px;
+  display: grid;
+  gap: 4px;
+  margin: 0 0 16px;
   padding: 0;
   list-style: none;
 }
@@ -313,7 +314,7 @@ a:hover {
   grid-template-columns: 22px minmax(0, 1fr);
   gap: 7px;
   align-items: start;
-  padding: 7px 7px 7px 5px;
+  padding: 8px;
   border-radius: 8px;
   color: var(--muted);
   font-size: 13px;
@@ -346,7 +347,7 @@ a:hover {
 
 .repo-link {
   display: inline-block;
-  margin: 20px 5px 0;
+  margin: 16px 5px 0;
   color: var(--muted);
   font-size: 13px;
 }
