@@ -1,3 +1,8 @@
+> **AI-assisted course experiment:** This course was created with substantial
+> assistance from OpenAI GPT-5.6 Sol to explore whether an AI system can
+> structure a coherent, engaging programming curriculum. The code, exercises,
+> and links are tested, but the material should still be approached critically.
+
 # Learn Rust by Building
 
 A beginner-first Rust course built around one growing project: a small delivery

@@ -351,6 +351,28 @@ a:hover {
   font-size: 13px;
 }
 
+.ai-disclosure {
+  margin: 0 5px 22px;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--surface-strong);
+}
+
+.ai-disclosure strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.ai-disclosure p {
+  margin: 0;
+  color: var(--faint);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
 .lesson-shell {
   min-width: 0;
   min-height: calc(100dvh - var(--header-height));
