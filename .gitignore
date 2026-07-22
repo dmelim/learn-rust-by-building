@@ -1,0 +1,21 @@
+target/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+.cargo/credentials
+.cargo/credentials.toml
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+secrets.*
+
+# Local editor, operating-system, and runtime files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

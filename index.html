@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A beginner-first Rust course built around small ideas, immediate practice, and one growing dispatch-desk project."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Learn Rust by Building</title>
+    <link rel="stylesheet" href="site/course.css" />
+    <script src="site/vendor/mermaid/mermaid.min.js" defer></script>
+    <script src="site/course.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#lesson">Skip to lesson</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <button
+          class="text-button menu-button"
+          id="menu-button"
+          type="button"
+          aria-controls="course-sidebar"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+        <a class="brand" href="#/course/README.md" aria-label="Learn Rust by Building home">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span>Learn Rust by Building</span>
+        </a>
+        <div class="header-actions">
+          <span class="header-progress" id="header-progress">0 complete</span>
+          <button class="text-button" id="theme-button" type="button">Theme: Auto</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-scrim" id="mobile-scrim" hidden></div>
+
+    <div class="course-layout">
+      <aside class="course-sidebar" id="course-sidebar" aria-label="Course navigation">
+        <div class="sidebar-top">
+          <label for="course-search">Find a lesson</label>
+          <input id="course-search" type="search" placeholder="Ownership, files, Cargo..." autocomplete="off" />
+          <p class="progress-copy" id="progress-copy">Your progress stays in this browser.</p>
+        </div>
+        <nav id="course-navigation"></nav>
+        <a class="repo-link" href="#/README.md">About this course</a>
+      </aside>
+
+      <main id="lesson" class="lesson-shell" tabindex="-1">
+        <div class="lesson-loading" id="lesson-loading" aria-live="polite">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <article class="lesson-content" id="lesson-content" hidden></article>
+      </main>
+
+      <aside class="page-outline" aria-label="On this page">
+        <p>On this page</p>
+        <nav id="page-outline"></nav>
+      </aside>
+    </div>
+
+    <noscript>
+      <div class="noscript-message">
+        This course reader needs JavaScript to load the Markdown lessons. The source files remain available in the
+        <code>course</code> folder.
+      </div>
+    </noscript>
+  </body>
+</html>

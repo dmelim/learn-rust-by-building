@@ -1,0 +1,5 @@
+* text=auto
+*.sh text eol=lf
+
+# Keep the bundled browser dependency out of GitHub language statistics.
+site/vendor/** linguist-vendored

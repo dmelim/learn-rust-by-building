@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "course/*/practical/starter",
+    "course/*/practical/solution",
+    "course/capstone/starter",
+    "course/capstone/solution",
+]
+resolver = "3"
