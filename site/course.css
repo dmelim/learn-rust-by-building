@@ -621,6 +621,7 @@ a:hover {
   min-height: 220px;
   padding: clamp(22px, 5vw, 42px);
   place-items: center;
+  justify-items: safe center;
   overflow-x: auto;
   color: var(--ink);
 }
