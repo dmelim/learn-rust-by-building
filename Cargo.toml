@@ -4,5 +4,6 @@ members = [
     "course/*/practical/solution",
     "course/capstone/starter",
     "course/capstone/solution",
+    "projects/service-runner/*",
 ]
 resolver = "3"

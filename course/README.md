@@ -4,6 +4,10 @@ This curriculum follows the progression of the official Rust Book while
 splitting large subjects into smaller learning loops. Each module ends in a
 practical milestone, and the milestones build toward one larger capstone.
 
+Already productive in Go, TypeScript, or another backend language? Use the
+[Rust for experienced developers](experienced/README.md) route. It links into
+this curriculum only where Rust-specific foundations are useful.
+
 ## Learning path
 
 ```mermaid

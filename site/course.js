@@ -9,6 +9,14 @@ const COURSE_SECTIONS = [
     ],
   },
   {
+    title: "Experienced developer route",
+    items: [
+      { title: "Route overview", path: "course/experienced/README.md" },
+      { title: "Rust through Go and TypeScript", path: "course/experienced/01-rust-through-go-and-typescript.md" },
+      { title: "Service state and processes", path: "course/experienced/02-service-state-and-processes.md" },
+    ],
+  },
+  {
     title: "Foundations",
     items: [
       { title: "Module overview", path: "course/01-foundations/README.md" },
@@ -500,6 +508,15 @@ function renderOutline(headings) {
 }
 
 function practicalInfo(path) {
+  if (path === "course/experienced/02-service-state-and-processes.md") {
+    return {
+      starter: "projects/service-runner/01-state-and-processes/src/lib.rs",
+      command: "cargo test -p service_runner_state",
+      heading: "Open the service-runner checkpoint",
+      button: "Open checkpoint file",
+      action: "review the ownership decisions and transition tests",
+    };
+  }
   if (path === "course/capstone/README.md") {
     return {
       starter: "course/capstone/starter/src/lib.rs",
@@ -531,13 +548,15 @@ function practicalCallout(info) {
   return `
     <section class="practical-callout" aria-labelledby="build-in-editor">
       <div>
-        <h2 id="build-in-editor">Move into your code editor</h2>
-        <p>Open <code>${escapeHtml(info.starter)}</code>, complete the TODOs, then run <code>${escapeHtml(
-          info.command,
-        )}</code>.</p>
+        <h2 id="build-in-editor">${escapeHtml(info.heading || "Move into your code editor")}</h2>
+        <p>Open <code>${escapeHtml(info.starter)}</code>, ${escapeHtml(
+          info.action || "complete the TODOs",
+        )}, then run <code>${escapeHtml(info.command)}</code>.</p>
       </div>
       <div class="practical-actions">
-        <a class="primary-button" href="${info.starter}" target="_blank">Open starter file</a>
+        <a class="primary-button" href="${info.starter}" target="_blank">${escapeHtml(
+          info.button || "Open starter file",
+        )}</a>
         <button class="secondary-button copy-path-button" type="button" data-copy="${escapeHtml(
           info.starter,
         )}">Copy path</button>
@@ -586,7 +605,7 @@ async function loadLesson() {
     const practical = practicalInfo(currentPath);
     const welcome =
       currentPath === DEFAULT_PATH
-        ? '<div class="welcome-actions"><a class="primary-button" href="#/course/00-how-to-use-this-course.md">Start the course</a><span>Six modules, one growing project.</span></div>'
+        ? '<div class="welcome-actions"><a class="primary-button" href="#/course/00-how-to-use-this-course.md">Start the beginner course</a><a class="secondary-button" href="#/course/experienced/README.md">Use the experienced route</a></div>'
         : "";
     const lead = welcome || (practical ? practicalCallout(practical) : "");
     const articleHtml = lead ? rendered.html.replace("</h1>", `</h1>${lead}`) : rendered.html;

@@ -5,8 +5,9 @@
 
 # Learn Rust by Building
 
-A beginner-first Rust course built around one growing project: a small delivery
-dispatch desk.
+A Rust course with two routes: a beginner curriculum built around a delivery
+dispatch desk, and a focused route for experienced Go and TypeScript developers
+building a local service runner.
 
 > Learn one idea, use it immediately, and carry it into a larger program.
 
@@ -35,8 +36,9 @@ node site/static-server.mjs 8000
 
 Then open <http://localhost:8000>.
 
-You can also read the [curriculum directly in Markdown](course/README.md) and
-start with [How to use this course](course/00-how-to-use-this-course.md).
+You can also read the [curriculum directly in Markdown](course/README.md), start
+with [How to use this course](course/00-how-to-use-this-course.md), or take the
+[experienced developer route](course/experienced/README.md).
 
 ## What you will build
 
@@ -55,6 +57,11 @@ persistent command-line application.
 
 Every module is complete and includes lessons, a practical brief, a starter,
 and a reference solution.
+
+Experienced Go and TypeScript developers can take a shorter route that reuses
+selected foundational lessons while building a process-oriented service runner.
+Its first checkpoint covers ownership decisions, state transitions, child
+process launch, and exit status handling.
 
 ## How the practicals work
 
@@ -91,6 +98,8 @@ course/                   lessons, practicals, and capstone
   ...
   06-tests-traits-files/
   capstone/
+  experienced/            focused route for experienced developers
+projects/service-runner/  incremental service-runner checkpoints
 scripts/                  local validation and course-server commands
 site/                     course reader, styles, and vendored Mermaid runtime
 index.html                browser entry point
